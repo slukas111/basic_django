@@ -1,0 +1,27 @@
+{% extends "base.html" %}
+
+{% block title %} Welcome {% endblock%}
+
+{% block content %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Meeting: {{meeting.title}}</title>
+</head>
+<body>
+    <h3>
+        {{meeting.title}}
+    </h3>
+
+<p>
+This meeting has been scheduled on {{meeting.date}}, at
+{{meeting.scheduled}} in <strong>{{meeting.room}}</strong>
+</p>
+
+<p>
+    <button><a href= "{% url 'home' %}">Home<a/></button>
+</p>
+
+{% endblock content %}

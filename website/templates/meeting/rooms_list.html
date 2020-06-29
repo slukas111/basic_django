@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+
+{% block title %} Welcome {% endblock%}
+
+{% block content %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Rooms</title>
+</head>
+<body>
+    <h3>List of Rooms: </h3>
+    <ul>
+        {% for room in rooms%}
+    <li>
+        {{room}}
+    </li>
+        {% endfor %} 
+    </ul>
+    <p>
+    <a href="{% url 'home'%}"> Return to Meetings</a>
+    </p>
+
+{% endblock content %}
